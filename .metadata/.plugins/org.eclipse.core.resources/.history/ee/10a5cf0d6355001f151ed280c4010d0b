@@ -1,0 +1,10 @@
+package com.example.Survey_Management_System_API.repository;
+
+import com.example.Survey_Management_System_API.entity.PublicPolls;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PublicPollsRepository extends JpaRepository<PublicPolls, Long> {
+	 List<PublicPolls> findByPollId(Long pollId);S
+}
